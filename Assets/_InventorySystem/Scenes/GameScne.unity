@@ -886,12 +886,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1782279717}
+  m_Father: {fileID: 1010858312}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 105.65723, y: 50}
+  m_AnchoredPosition: {x: 0.00012207031, y: 0}
+  m_SizeDelta: {x: 644.978, y: 256.802}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &875263371
 MonoBehaviour:
@@ -913,7 +913,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Close - Caps Lock
+  m_text: 'Add items : Drag and Drop item towards the backpack
+
+
+    View Inventory
+    : Hover and hold towards the backpack
+
+
+    Remove Items : Hover and hold LMB
+    on the backpack, hover over the item and release LMB to remove the item'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -940,14 +948,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 23.3
+  m_fontSizeBase: 23.3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 2
-  m_HorizontalAlignment: 2
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -976,7 +984,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -30.591248, y: 0, z: 0, w: 0}
+  m_margin: {x: -0.5109253, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1160,6 +1168,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 875263370}
   - {fileID: 1303341926}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2142,8 +2151,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.4747398, y: 2.1980736, z: 1.3507744}
-  m_Center: {x: -0.028149337, y: 0.59903634, z: -0.17940013}
+  m_Size: {x: 2.11802, y: 2.1980736, z: 1.5983022}
+  m_Center: {x: -0.0022826195, y: 0.5990364, z: -0.055633713}
 --- !u!1 &1764214107
 GameObject:
   m_ObjectHideFlags: 0
@@ -2241,7 +2250,6 @@ RectTransform:
   - {fileID: 1608705968}
   - {fileID: 46178764}
   - {fileID: 1598165438}
-  - {fileID: 875263370}
   - {fileID: 1808498897}
   m_Father: {fileID: 1303341926}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

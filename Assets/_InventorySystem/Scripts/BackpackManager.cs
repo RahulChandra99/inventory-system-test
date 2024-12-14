@@ -9,10 +9,10 @@ public class BackpackManager : MonoBehaviour
 {
     [Header("Backpack UI Elements")]
     public GameObject backpackUIPanel; 
-    public Transform weaponBackpackArea; // weapon items ui area 
-    public Transform materialBackpackArea; // material items ui area 
-    public Transform armorBackpackArea; // armor items ui area 
-    public GameObject backpackSlotPrefab; // Prefab for a UI slot
+    public Transform weaponBackpackArea; 
+    public Transform materialBackpackArea; 
+    public Transform armorBackpackArea;  
+    public GameObject backpackSlotPrefab; 
     
 
     [Header("Backpack Settings")]
@@ -48,11 +48,11 @@ public class BackpackManager : MonoBehaviour
 
     void Update()
     {
-        HandleDragAndDrop();
-        HandleBackpackHover();
+        DragAndDrop();
+        BackpackHover();
     }
 
-    private void HandleDragAndDrop()
+    private void DragAndDrop()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -101,7 +101,7 @@ public class BackpackManager : MonoBehaviour
         }
     }
 
-    private void HandleBackpackHover()
+    private void BackpackHover()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hit) && hit.collider.CompareTag("Backpack") && !isHoldingItem)
@@ -195,7 +195,9 @@ public class BackpackManager : MonoBehaviour
                 AttachItemToSlot(item, slot); 
                 CreateUISlot(itemComponent.itemName, uiParent,itemComponent.type);
                 backpackSlots[item] = slot;
-
+                
+                Debug.Log("Adding item: " + itemComponent.itemName + " of type: " + itemComponent.type);
+                
                 // Trigger UnityEvent and send request
                 onItemAdded?.Invoke(itemComponent.identifier);
                 break;
@@ -223,6 +225,8 @@ public class BackpackManager : MonoBehaviour
             yield return null;
         }
         item.position = targetPosition;
+        
+        
     }
 
     private void CreateUISlot(string itemName, Transform uiParent, string itemType)
